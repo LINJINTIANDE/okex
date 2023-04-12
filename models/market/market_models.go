@@ -140,7 +140,7 @@ func (c *Candle) UnmarshalJSON(buf []byte) error {
 		o, h, l, cl, vol, volCcy, ts, volCcyQuote, confirm string
 		err                                                error
 	)
-	tmp := []interface{}{&ts, &o, &h, &l, &cl, &vol, &volCcy, volCcyQuote, confirm}
+	tmp := []interface{}{&ts, &o, &h, &l, &cl, &vol, &volCcy, &volCcyQuote, &confirm}
 	wantLen := len(tmp)
 	if err := json.Unmarshal(buf, &tmp); err != nil {
 		return err
